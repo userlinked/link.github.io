@@ -1,1 +1,59 @@
-hi
+
+<!DOCTYPE html>
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Обычная визитка че там">
+        <title>Link Raindev</title>
+        <link href="https://fl1yd.su/assets/images/icon.png" rel="icon">
+        <link href="./amoreme/style.css" rel="stylesheet">
+        <title></title>
+    </head>
+    <body>
+        <main>
+            <div class="info">
+                <img src="./amoreme/photo_2023-01-19_22-27-12.jpg" alt="avatar.png">
+                <p>LINK (<b><span class="color">линк</span></b>, а не <span id="typed"></span>)</p>
+                <span>Привет, меня зовут дима, занимаюсь с програмированией пайтон, сижу в тг</span>
+            </div>
+            <div class="socials">
+                <ul>
+                    <li><a href="https://t.me/riotpy">TELEGRAM</a></li>
+                    <li><span class="color">-</span></li>
+                    <li><a id="button" href="https://t.me/nexxrevengebot">NEXX BOT</a></li>
+                    <li><span class="color">-</span></li>
+                    <li><a id="button" href="http://t.me/c_bio">BIO</a></li>
+                </ul>
+            </div>
+        </main>
+        <canvas id="canvas" width="790" height="436"></canvas>
+    
+    <script src="./amoreme/particles.js"></script>
+    <script src="./amoreme/script.js"></script>
+    <script src="./amoreme/typed.js@2.0.12"></script>
+    <script src="./amoreme/jquery-3.6.1.js"></script>
+    <script>
+        $(document).click(function(event) {
+            if (document.getElementById("donate").style.display != "none") {
+                if (!$(event.target).closest(".popup").length) {
+                    return $("#donate").fadeOut();
+                }
+            }
+
+            if ($(event.target).closest("#button").length) {
+                return $("#donate").fadeIn();
+            }
+        });
+
+        var typed = new Typed(
+            '#typed', {
+                strings: ["ленк", "хлинк", "свинк"],
+                typeSpeed: 180,
+                backSpeed: 180,
+                showCursor: false,
+                loop: true
+            }
+        );
+    </script>
+
+</body></html>
